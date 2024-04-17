@@ -293,7 +293,7 @@
   left: 456px;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .group {
@@ -320,7 +320,7 @@
   left: 0;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .image {
@@ -364,7 +364,7 @@
   left: 0;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .rectangle-10 {
@@ -374,7 +374,7 @@
   left: -1px;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .overlap-2 {
@@ -385,7 +385,7 @@
   left: 196px;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .image-2 {
@@ -420,7 +420,7 @@
   left: 196px;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .overlap-group-2 {
@@ -431,7 +431,7 @@
   left: 392px;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .image-3 {
@@ -466,7 +466,7 @@
   left: 392px;
   background-color: #ffffff;
   border: 1px solid;
-  border-color: #b90000;
+  border-color: #ffffff;
 }
 
 .frame .overlap-wrapper {
@@ -586,13 +586,15 @@
   <body>
     <div class="frame">
       <div class="overlap">
-        <div class="desktop"><div class="rectangle"></div></div>
-        <img class="img" src="img/rectangle-196.svg" />
-        <div class="div"></div>
-        <div class="rectangle-2"></div>
+        <div class="desktop"><div class="rectangle"></div>
+        <div class="div1">
+          <button type="button" class="div" onclick="location.href='http://127.0.0.1:8000/index/#'"> </button>
+        </div>
+        <div class="rectangle-1">
+          <form action="" method="get"></form>
+          <input type="text" placeholder="찾으시는 상품을 입력해주세요." class="rectangle-2">
+        </div>
         <div class="text-wrapper">로고</div>
-        <div class="text-wrapper-2">찾으시는 상품을 입력해보세요.</div>
-        <img class="vector" src="img/vector.svg" />
         <div class="rectangle-3"></div>
         <div class="rectangle-4"></div>
         <div class="rectangle-5"></div>
@@ -612,27 +614,28 @@
         <div class="rectangle-8"></div>
         <div class="group">
           <div class="overlap-group">
-            <div class="rectangle-9"></div>
+            <div class="rectangle-9-1">
+              <button type="button" class="rectangle-9" onclick="location.href='http://127.0.0.1:8000/detail/#'"> </button>
+            </div>
             <img class="image" src="img/image-1.png" />
             <p class="p">
               <span class="text-wrapper-8">상품 PNG<br /></span> <span class="text-wrapper-9">184*200.8</span>
             </p>
           </div>
-          <div class="rectangle-wrapper"><div class="rectangle-10"></div></div>
           <div class="overlap-2">
+             <button type="button" class="rectangle-9" onclick="location.href='http://127.0.0.1:8000/detail/#'"> </button>
             <img class="image-2" src="img/image-2.png" />
             <p class="PNG-2">
               <span class="text-wrapper-8">상품 PNG<br /></span> <span class="text-wrapper-9">184*200.8</span>
             </p>
           </div>
-          <div class="rectangle-11"></div>
           <div class="overlap-group-2">
+             <button type="button" class="rectangle-9" onclick="location.href='http://127.0.0.1:8000/detail/#'"> </button>
             <img class="image-3" src="img/image-3.png" />
             <p class="PNG-3">
               <span class="text-wrapper-8">상품 PNG<br /></span> <span class="text-wrapper-9">184*200.8</span>
             </p>
           </div>
-          <div class="rectangle-12"></div>
         </div>
         <div class="overlap-wrapper">
           <div class="overlap-3">
@@ -658,8 +661,6 @@
             <div class="text-wrapper-13">이영역은추가개발영역입니다여백남겨주세요</div>
           </div>
         </div>
-        <div class="rectangle-13"></div>
-        <div class="text-wrapper-14">찜하기를 취소했어요</div>
       </div>
     </div>
   </body>
