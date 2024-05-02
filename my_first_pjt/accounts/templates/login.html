@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="frame">
+  <div class="overlap">
+    <div class="desktop">
+      <div class="rectangle"></div>
+      <div class="div1">
+        <a href="{% url 'main:index' %}" class="div"> </a>
+      </div>
+      <div class="rectangle-1">
+        <form action="{% url 'accounts:login' %}" method="post">
+          {% csrf_token %}
+          <input type="text" placeholder="아이디를 입력해주세요." class="rectangle-2" name="username" required>
+          <input type="password" placeholder="비밀번호를 입력해주세요." class="rectangle-2" name="password" required>
+          <button type="submit" class="rectangle-3">로그인</button>
+        </form>
+      </div>
+      <div class="text-wrapper-3"><a href="{% url 'accounts:signup' %}">회원가입</a></div>
+      <div class="rectangle-7"></div>
+      <p class="PNG">
+        <span class="span">배너 PNG<br /><br /></span> <span class="text-wrapper-7">600*484</span>
+      </p>
+      <div class="rectangle-8"></div>
+      <div class="group">
+        <div class="overlap-group">
+          <a href="{% url 'product:detail' %}?product_id=1" class="rectangle-9"> </a>
+          <img class="image" src="{{ MEDIA_URL }}img/image-1.png" />
+          <p class="p">
+            <span class="text-wrapper-8">상품 PNG<br /></span> <span class="text-wrapper-9">184*200.8</span>
+          </p>
+        </div>
+        <div class="overlap-2">
+          <a href="{% url 'product:detail' %}?product_id=2" class="rectangle-9"> </a>
+          <img class="image-2" src="{{ MEDIA_URL }}img/image-2.png" />
+          <p class="PNG-2">
+            <span class="text-wrapper-8">상품 PNG<br /></span> <span class="text-wrapper-9">184*200.8</span>
+          </p>
+        </div>
+        <div class="overlap-group-2">
+          <a href="{% url 'product:detail' %}?product_id=3" class="rectangle-9"> </a>
+          <img class="image-3" src="{{ MEDIA_URL }}img/image-3.png" />
+          <p class="PNG-3">
+            <span class="text-wrapper-8">상품 PNG<br /></span> <span class="text-wrapper-9">184*200.8</span>
+          </p>
+        </div>
+      </div>
+      <div class="overlap-wrapper">
+        <div class="overlap-3">
+          <div class="text-wrapper-10">상품명을입력해주세요열두자</div>
+          <div class="text-wrapper-11">20,000</div>
+          <div class="text-wrapper-12">작성자닉네임</div>
+          <div class="text-wrapper-13">이영역은추가개발영역입니다여백남겨주세요</div>
+        </div>
+      </div>
+      <div class="overlap-group-wrapper">
+        <div class="overlap-4">
+          <div class="rectangle-10"></div>
+          <div class="text-wrapper-14">NEW</div>
+          <div class="text-wrapper-15">오늘의 신상품</div>
+          <div class="image-4"></div>
+        </div>
+        <div class="overlap-5">
+          <div class="rectangle-11"></div>
+          <div class="text-wrapper-16">BEST</div>
+          <div class="text-wrapper-17">인기상품</div>
+          <div class="image-5"></div>
+        </div>

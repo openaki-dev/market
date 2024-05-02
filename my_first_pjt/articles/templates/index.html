@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<style>
+    .frame {
+        width: 600px;
+        height: 1024px;
+        background-color: #ffffff;
+        overflow: hidden;
+        border: 1px solid;
+        border-color: #000000;
+    }
+
+    .frame .overlap {
+        position: relative;
+        width: 1440px;
+        height: 1024px;
+        left: -444px;
+    }
+
+    .frame .desktop {
+        position: absolute;
+        width: 1440px;
+        height: 1024px;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+    }
+
+    .frame .rectangle {
+        width: 2031px;
+        height: 1024px;
+        background-color: #ffffff;
+    }
+
+    .frame .img {
+        position: absolute;
+        width: 600px;
+        height: 52px;
+        top: 0;
+        left: 444px;
+    }
+
+    .frame .div {
+        position: absolute;
+        width: 85px;
+        height: 32px;
+        top: 10px;
+        left: 477px;
+        background-color: #d9d9d9;
+    }
+
+    .frame .rectangle-2 {
+        position: absolute;
+        width: 419px;
+        height: 32px;
+        top: 10px;
+        left: 592px;
+        background-color: #ffffff;
+        border-radius: 32px;
+        border: 1px solid;
+        border-color: #bebebe;
+    }
+
+    .frame .text-wrapper {
+        width: 85px;
+        height: 20px;
+        top: 15px;
+        left: 477px;
+        font-family: "Noto Sans KR-Light", Helvetica;
+        font-weight: 300;
+        color: #000000;
+        font-size: 10px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-2 {
+        position: absolute;
+        width: 335px;
+        height: 20px;
+        top: 15px;
+        left: 632px;
+        font-family: "Noto Sans KR-Light", Helvetica;
+        font-weight: 300;
+        color: #000000;
+        font-size: 10px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        line-height: 16px;
+    }
+
+    .frame .vector {
+        position: absolute;
+        width: 12px;
+        height: 14px;
+        top: 18px;
+        left: 606px;
+    }
+
+    .frame .rectangle-3 {
+        position: absolute;
+        width: 150px;
+        height: 54px;
+        top: 970px;
+        left: 447px;
+        background-color: #ffffff;
+        border-radius: 10px 0px 0px 0px;
+        border: 1px solid;
+        border-color: #cecece;
+    }
+
+    .frame .rectangle-4 {
+        position: absolute;
+        width: 150px;
+        height: 54px;
+        top: 970px;
+        left: 596px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #cecece;
+    }
+
+    .frame .rectangle-5 {
+        position: absolute;
+        width: 150px;
+        height: 54px;
+        top: 970px;
+        left: 745px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #cecece;
+    }
+
+    .frame .rectangle-6 {
+        position: absolute;
+        width: 150px;
+        height: 54px;
+        top: 970px;
+        left: 894px;
+        background-color: #ffffff;
+        border-radius: 0px 10px 0px 0px;
+        border: 1px solid;
+        border-color: #cecece;
+    }
+
+    .frame .text-wrapper-3 {
+        width: 149px;
+        height: 20px;
+        top: 996px;
+        left: 447px;
+        font-family: "Noto Sans KR-Regular", Helvetica;
+        font-weight: 400;
+        color: #4d4d4d;
+        font-size: 10px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-4 {
+        width: 149px;
+        height: 20px;
+        top: 996px;
+        left: 596px;
+        font-family: "Noto Sans KR-Regular", Helvetica;
+        font-weight: 400;
+        color: #4d4d4d;
+        font-size: 10px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-5 {
+        width: 149px;
+        height: 20px;
+        top: 996px;
+        left: 745px;
+        font-family: "Noto Sans KR-Regular", Helvetica;
+        font-weight: 400;
+        color: #4d4d4d;
+        font-size: 10px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-6 {
+        width: 149px;
+        height: 20px;
+        top: 996px;
+        left: 894px;
+        font-family: "Noto Sans KR-Regular", Helvetica;
+        font-weight: 400;
+        color: #4d4d4d;
+        font-size: 10px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .ellipse {
+        left: 512px;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 977px;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+    }
+
+    .frame .ellipse-2 {
+        left: 661px;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 977px;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+    }
+
+    .frame .ellipse-3 {
+        left: 810px;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 977px;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+    }
+
+    .frame .ellipse-4 {
+        left: 958px;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 977px;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+    }
+
+    .frame .rectangle-7 {
+        position: absolute;
+        width: 600px;
+        height: 484px;
+        top: 52px;
+        left: 444px;
+        background-color: #e8e8e8;
+    }
+
+    .frame .PNG {
+        width: 376px;
+        top: 242px;
+        left: 556px;
+        font-size: 50px;
+        letter-spacing: -2.5px;
+        position: absolute;
+        height: 97px;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #d5d5d5;
+        text-align: center;
+        line-height: 16px;
+    }
+
+    .frame .span {
+        letter-spacing: -1.25px;
+    }
+
+    .frame .text-wrapper-7 {
+        font-size: 20px;
+        letter-spacing: -0.2px;
+    }
+
+    .frame .rectangle-8 {
+        position: absolute;
+        width: 576px;
+        height: 295px;
+        top: 563px;
+        left: 456px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .group {
+        position: absolute;
+        width: 582px;
+        height: 407px;
+        top: 563px;
+        left: 456px;
+    }
+
+    .frame .overlap-group {
+        position: absolute;
+        width: 186px;
+        height: 221px;
+        top: 0;
+        left: 0;
+    }
+
+    .frame .rectangle-9 {
+        position: absolute;
+        width: 184px;
+        height: 221px;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .image {
+        top: 166px;
+        left: 130px;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+    }
+
+    .frame .p {
+        width: 182px;
+        top: 62px;
+        left: 4px;
+        font-size: 30px;
+        letter-spacing: -1.5px;
+        position: absolute;
+        height: 97px;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #d5d5d5;
+        text-align: center;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-8 {
+        letter-spacing: -0.45px;
+    }
+
+    .frame .text-wrapper-9 {
+        font-size: 10px;
+        letter-spacing: -0.05px;
+    }
+
+    .frame .rectangle-wrapper {
+        position: absolute;
+        width: 184px;
+        height: 93px;
+        top: 314px;
+        left: 0;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .rectangle-10 {
+        position: relative;
+        height: 93px;
+        top: -1px;
+        left: -1px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .overlap-2 {
+        position: absolute;
+        width: 184px;
+        height: 221px;
+        top: 0;
+        left: 196px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .image-2 {
+        top: 165px;
+        left: 133px;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+    }
+
+    .frame .PNG-2 {
+        left: -1px;
+        position: absolute;
+        width: 182px;
+        height: 97px;
+        top: 61px;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #d5d5d5;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: -1.5px;
+        line-height: 16px;
+    }
+
+    .frame .rectangle-11 {
+        position: absolute;
+        width: 184px;
+        height: 93px;
+        top: 314px;
+        left: 196px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .overlap-group-2 {
+        position: absolute;
+        width: 184px;
+        height: 221px;
+        top: 0;
+        left: 392px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .image-3 {
+        top: 172px;
+        left: 133px;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+    }
+
+    .frame .PNG-3 {
+        left: 0;
+        position: absolute;
+        width: 182px;
+        height: 97px;
+        top: 61px;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #d5d5d5;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: -1.5px;
+        line-height: 16px;
+    }
+
+    .frame .rectangle-12 {
+        position: absolute;
+        width: 184px;
+        height: 93px;
+        top: 314px;
+        left: 392px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #ffffff;
+    }
+
+    .frame .overlap-wrapper {
+        position: absolute;
+        width: 190px;
+        height: 68px;
+        top: 784px;
+        left: 460px;
+    }
+
+    .frame .overlap-3 {
+        position: relative;
+        width: 182px;
+        height: 68px;
+    }
+
+    .frame .text-wrapper-10 {
+        position: absolute;
+        width: 182px;
+        height: 21px;
+        top: 14px;
+        left: 0;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 10px;
+        letter-spacing: -0.5px;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-11 {
+        width: 182px;
+        height: 21px;
+        top: 30px;
+        left: 0;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #8a8a8a;
+        font-size: 15px;
+        letter-spacing: -0.75px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-12 {
+        width: 182px;
+        height: 21px;
+        top: 0;
+        left: 0;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #898989;
+        font-size: 8px;
+        letter-spacing: -0.4px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .text-wrapper-13 {
+        width: 182px;
+        height: 21px;
+        top: 47px;
+        left: 0;
+        font-family: "Noto Sans KR-Bold", Helvetica;
+        font-weight: 700;
+        color: #d5d5d5;
+        font-size: 8px;
+        letter-spacing: -0.4px;
+        position: absolute;
+        line-height: 16px;
+    }
+
+    .frame .overlap-group-wrapper {
+        position: absolute;
+        width: 190px;
+        height: 68px;
+        top: 784px;
+        left: 654px;
+    }
+
+    .frame .div-wrapper {
+        position: absolute;
+        width: 190px;
+        height: 68px;
+        top: 784px;
+        left: 850px;
+    }
+
+    .frame .rectangle-13 {
+        position: absolute;
+        width: 484px;
+        height: 32px;
+        top: 923px;
+        left: 522px;
+        background-color: #80808069;
+        border-radius: 30px;
+    }
+
+    .frame .text-wrapper-14 {
+        width: 455px;
+        height: 29px;
+        top: 924px;
+        left: 535px;
+        font-family: "Noto Sans KR-Medium", Helvetica;
+        font-weight: 500;
+        color: #000000;
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: -0.75px;
+        position: absolute;
+        line-height: 16px;
+    }
+</style>
+
+<body>
+    <div class="frame">
+        <div class="overlap">
+            <div class="desktop">
+                <div class="rectangle"></div>
+                <div class="div1">
+                    <button type="button" class="div" onclick="location.href='http://127.0.0.1:8000/index/#'"> </button>
+                </div>
+                <div class="rectangle-1">
+                    <form action="" method="get"></form>
+                    <input type="text" placeholder="찾으시는 상품을 입력해주세요." class="rectangle-2">
+                </div>
+                <div class="text-wrapper">로고</div>
+                <div class="rectangle-3"></div>
+                <div class="rectangle-4"></div>
+                <div class="rectangle-5"></div>
+                <div class="rectangle-6"></div>
+                <div class="text-wrapper-3">홈</div>
+                <div class="text-wrapper-4">찜</div>
+                <div class="text-wrapper-5">마이페이지</div>
+                <div class="text-wrapper-6">글쓰기</div>
+                <div class="ellipse"></div>
+                <div class="ellipse-2"></div>
+                <div class="ellipse-3"></div>
+                <div class="ellipse-4"></div>
+                <div class="rectangle-7"></div>
+                <p class="PNG">
+                    <span class="span">배너 PNG<br /><br /></span> <span class="text-wrapper-7">600*484</span>
+                </p>
+                <div class="rectangle-8"></div>
+                <div class="group">
+                    <div class="overlap-group">
+                        <div class="rectangle-9-1">
+                            <button type="button" class="rectangle-9"
+                                onclick="location.href='http://127.0.0.1:8000/detail/#'"> </button>
+                        </div>
+                        <img class="image" src="img/image-1.png" />
+                        <p class="p">
+                            <span class="text-wrapper-8">상품 PNG<br /></span> <span
+                                class="text-wrapper-9">184*200.8</span>
+                        </p>
+                    </div>
+                    <div class="overlap-2">
+                        <button type="button" class="rectangle-9"
+                            onclick="location.href='http://127.0.0.1:8000/detail/#'"> </button>
+                        <img class="image-2" src="img/image-2.png" />
+                        <p class="PNG-2">
+                            <span class="text-wrapper-8">상품 PNG<br /></span> <span
+                                class="text-wrapper-9">184*200.8</span>
+                        </p>
+                    </div>
+                    <div class="overlap-group-2">
+                        <button type="button" class="rectangle-9"
+                            onclick="location.href='http://127.0.0.1:8000/detail/#'"> </button>
+                        <img class="image-3" src="img/image-3.png" />
+                        <p class="PNG-3">
+                            <span class="text-wrapper-8">상품 PNG<br /></span> <span
+                                class="text-wrapper-9">184*200.8</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="overlap-wrapper">
+                    <div class="overlap-3">
+                        <div class="text-wrapper-10">상품명을입력해주세요열두자</div>
+                        <div class="text-wrapper-11">20,000</div>
+                        <div class="text-wrapper-12">작성자닉네임</div>
+                        <div class="text-wrapper-13">이영역은추가개발영역입니다여백남겨주세요</div>
+                    </div>
+                </div>
+                <div class="overlap-group-wrapper">
+                    <div class="overlap-3">
+                        <div class="text-wrapper-10">상품명을입력해주세요열두자</div>
+                        <div class="text-wrapper-11">20,000</div>
+                        <div class="text-wrapper-12">작성자닉네임</div>
+                        <div class="text-wrapper-13">이영역은추가개발영역입니다여백남겨주세요</div>
+                    </div>
+                </div>
+                <div class="div-wrapper">
+                    <div class="overlap-3">
+                        <div class="text-wrapper-10">상품명을입력해주세요열두자</div>
+                        <div class="text-wrapper-11">20,000</div>
+                        <div class="text-wrapper-12">작성자닉네임</div>
+                        <div class="text-wrapper-13">이영역은추가개발영역입니다여백남겨주세요</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
